@@ -1,7 +1,4 @@
 import os
-import rational
-
-import logger
 
 
 def clear(): return os.system('cls')
@@ -16,7 +13,8 @@ def GetInt(msg):
 
 def item_sel():
     clear()
-    items = ["Ввести выражение для вычисления", "Посмотреть логи", "Очистить логи", "Выйти"]
+    items = ["Ввести выражение для вычисления",
+             "Посмотреть логи", "Очистить логи", "Выйти"]
     input = ""
     for i in range(len(items)):
         print(f"{i}: {items[i]}")
@@ -28,11 +26,11 @@ def item_sel():
 
 def get_expr():
     clear()
-    expr = input ("Введите выражение: ")
+    expr = input("Введите выражение: ")
     return expr
 
 
 def show(string):
     print()
-    print (string)
+    print(string)
     print()
