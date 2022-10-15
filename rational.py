@@ -52,7 +52,7 @@ def parse(string, opers):
             print(f"left = {left}, right = {right}, oper = {oper}")
             res = calc(float(left), float(right), oper)
             string = string.replace(f"{left}{oper}{right}", str(res), 1)
-            print(f"Res = {string}\n")
+            print(f"Res = {string}")
             i = 0
         i += 1
     return string

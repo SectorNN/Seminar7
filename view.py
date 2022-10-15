@@ -14,8 +14,9 @@ def GetInt(msg):
         return GetInt(msg)
 
 
-def item_sel(items):
+def item_sel():
     clear()
+    items = ["Ввести выражение для вычисления", "Посмотреть логи", "Выйти"]
     input = ""
     for i in range(len(items)):
         print(f"{i}: {items[i]}")
@@ -24,16 +25,14 @@ def item_sel(items):
         input = GetInt("Выбирите необходимую операцию: ")
     return input
 
-items = ["Ввести выражение для вычисления", "Посмотреть логи", "Выйти"]
 
-selection = item_sel(items)
+def get_expr():
+    clear()
+    expr = input ("Введите выражение: ")
+    return expr
 
-clear()
 
-match selection:
-    case 0:
-        expr = input ("Введите выражение: ")
-        res = rational.parse_all(expr)
-        logger.write(f"Результат вычисления: {expr} = {res}")
-    case 1:
-        logger.read_all()
+def show(string):
+    print()
+    print (string)
+    print()
