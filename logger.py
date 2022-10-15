@@ -1,4 +1,5 @@
 from datetime import datetime
+import os
 
 
 filename = "logdata.log"
@@ -12,5 +13,15 @@ def write(mess):
 
 
 def read_all():
-    with open(filename, "r", encoding="utf-8") as log:
-        return log.read()
+    try:
+        with open(filename, "r", encoding="utf-8") as log:
+            return log.read()
+    except:
+        return "Записи отсутствуют!"
+
+
+def clear():
+    try:
+        os.remove("logdata.log")
+    except:
+        1

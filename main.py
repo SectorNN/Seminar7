@@ -11,5 +11,5 @@ match view.item_sel():
         view.show(f"Результат вычисления: {expr} = {res}")
     case 1:
         view.show(logger.read_all())
-
-
+    case 2:
+        logger.clear()
