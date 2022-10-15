@@ -23,5 +23,6 @@ def read_all():
 def clear():
     try:
         os.remove("logdata.log")
+        return 1
     except:
-        1
+        return 0

@@ -12,4 +12,4 @@ match view.item_sel():
     case 1:
         view.show(logger.read_all())
     case 2:
-        logger.clear()
+        view.show("Логи очищены!") if logger.clear() else view.show("Логов нет!")
